@@ -119,7 +119,7 @@
 // let tragamonedas = ['💫', '💫', '💫', '💫', '💫', '⭐️'];
 
 // let gano = (tragamonedas)=>{
-//     let sonIguales = ''
+//     let sonIguales = '';
 //     let primerSimbolo = tragamonedas[0];
                     
 //     for (let i = 0; i <= 4 ; i++) {
@@ -140,34 +140,27 @@
 
 
 
-// estanJuntos(personajes)❌
+// estanJuntos(personajes)
 // Crear una función estanJuntos que tome como argumento un array de strings personajes, y devuelva true si Sam se encuentra al lado de Frodo, ya sea antes o después, o false sino. Ejemplo:
 
 // estanJuntos(['Sam', 'Frodo', 'Legolas']) //true
 // estanJuntos(['Aragorn', 'Frodo', 'Sam']) //true
 // estanJuntos(['Sam', 'Orco', 'Frodo']) //false
 
-let personajes = ['Aragorn', 'Frodo', 'Sam'];
-let sam = 'Sam';
-let frodo = 'Frodo';
+// let personajes = ['Aragorn', 'Frodo', 'Sam'];
+// let sam = 'Sam';
+// let frodo = 'Frodo';
 
-let estanJuntos = (personajes)=>{
+// let estanJuntos = (personajes)=>{
 
-    for (let i = 0; i < personajes.length; i++) {
-        console.log(personajes[i]);
+//     for (let i = 0; i < personajes.length; i++) {
 
-        if (personajes[i] === sam &&  personajes[i + 1] === frodo) {
-            return true;
-        }
-        else if (personajes[i] === frodo &&  personajes[i + 1] === sam){
-            return true;
-        } 
-        // else{
-        //     return false
-        // }
-    }
-}
-console.log(estanJuntos(personajes))
+//         if (personajes[i] === frodo) {
+//             return personajes[i + 1] === sam ||  personajes[i - 1] === sam;
+//         }
+//     }
+// }
+// console.log(estanJuntos(personajes))
 
 
 // separar(perrosYGatos)
@@ -175,22 +168,36 @@ console.log(estanJuntos(personajes))
 
 // separar('🐶🐱🐶🐱🐱🐶🐶') // '🐶🐶🐶🐶🐱🐱🐱'
 
-// let perrosYGatos = '🐶🐱🐶🐱🐱🐶🐶';
+
+//En solución reemplazo 🐶 por 'A' y 🐱 por 'B'.
+
+
+// let perrosYGatos = 'ABABBAA';
+
+// let a = 'A';
+// let b = 'B';
 
 // let separar = (perrosYGatos)=>{
-//     for (let i = 0; i < perrosYGatos.length; i++) {
+//     let perros = '';
+
+//     let gatos = '';
+
+//    for (let i = 0; i < perrosYGatos.length; i++) {
 //         const animal = perrosYGatos[i];
         
-//         if (animal === '🐶') {
-            
+//         if (animal === a) {
+//             perros += animal;
+
+
+//         } else if (animal === b){
+//             gatos += animal;
 //         }
 //     }
 
+//     return perros.concat(gatos);
 // }
 
-
-
-
+// console.log(separar(perrosYGatos));
 
 // obtenerChatStatus(usuarias)
 // Crear una función obtenerChatStatus que tome como argumento un array de strings usuarias y devuelva un string con el status del chat. Las reglas son:
@@ -203,12 +210,53 @@ console.log(estanJuntos(personajes))
 // obtenerChatStatus(['Ada']) // 'Ada está conectada'
 // obtenerChatStatus(['Ada', 'Grace']) // 'Ada y Grace están conectadas'
 // obtenerChatStatus(['Ada', 'Grace', 'Marie']) // 'Ada, Grace y 1 persona(s) más están conectadas'
+
+// let usuarias = ['Ada', 'Grace', 'Marie'];
+
+// let obtenerChatStatus = (usuarias)=>{
+
+//         if (usuarias.length === 1){
+
+//             return `${usuarias[0]} está conectada`;
+
+//         } else if (usuarias.length === 2){
+//             return `${usuarias[0]} y ${usuarias[1]} están conectadas`;
+
+//         } else if (usuarias.length > 2) {
+//             return`${usuarias[0]}, ${usuarias[1]} y ${usuarias.length - 2} persona(s) más están conectadas`;
+//         }
+        
+
+// }
+// console.log(obtenerChatStatus(usuarias))
+
+
 // germinar(plantines)
 // Crear una función germinar que tome como argumento un string de plantines con flores y plantines (🌱). El array debe comenzar con una flor. La función debe devolver un string con los plantines convertidos en flores. El plantín se debe convertir en la primera flor que encuentre a su izquierda. Ejemplo:
 
 // germinar('🌷🌱🌻🌱🌸🌱🌷🌱🌻🌱🌸🌱') // '🌷🌷🌻🌻🌸🌸🌷🌷🌻🌻🌸🌸'
 // germinar('🌷🌱🌱🌱🌻🌱🌱🌸🌱🌱🌱🌱') // '🌷🌷🌷🌷🌻🌻🌻🌸🌸🌸🌸🌸'
 // germinar('🌻🌸🌱🌷🌻🌱🌱🌷🌷🌱🌱🌱') // '🌻🌸🌸🌷🌻🌻🌻🌷🌷🌷🌷🌷'
+
+// let plantines = 'ACBCDCACBCDC';
+// let brote = 'C'
+
+// let germinar = (plantines) =>{
+//     let plantinesGerminados =[];
+// for (let i = 0; i < plantines.length; i++) {
+//     const plantin = plantines[i];
+    
+//     if(plantin === brote){
+//         plantinesGerminados += plantines[i - 1];      
+//     }
+//     else{
+//         plantinesGerminados += plantines[i];
+//     }
+//     }
+//     return plantinesGerminados
+// }
+// console.log(germinar(plantines))
+
 // comer(plantas)
 // Crear una función comer que tome por parámetro un string plantas que consista en plantas, un conejo y una señal de prohibido. El conejo se come todas las plantas que hay a su derecha, hasta que se encuentra con la señal de prohibido. El programa debe mostrar las plantas sobrevivientes, que son todas las que están a la izquierda del conejo (si hay) y a la derecha de la señal (si hay). Ejemplo:
 
