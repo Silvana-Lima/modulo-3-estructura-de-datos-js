@@ -257,18 +257,64 @@
 // }
 // console.log(germinar(plantines))
 
-// comer(plantas)
+// comer(plantas)❌
 // Crear una función comer que tome por parámetro un string plantas que consista en plantas, un conejo y una señal de prohibido. El conejo se come todas las plantas que hay a su derecha, hasta que se encuentra con la señal de prohibido. El programa debe mostrar las plantas sobrevivientes, que son todas las que están a la izquierda del conejo (si hay) y a la derecha de la señal (si hay). Ejemplo:
 
 // comer('🐰🥕🥬🥕🚫') // ''
 // comer('🥕🥬🐰🥕🥕🥕🚫') // '🥕🥬'
 // comer('🐰🥕🥬🥕🚫🥕') // '🥕'
 // comer('🌱🥕🌱🐰🌱🥬🌱🌱🚫🌷') // '🌱🥕🌱🌷'
+let plantas = 'CZLZP';
+let conejo = 'C';
+let prohibido = 'P';
+
+
+let comer = ()=>{
+
+    let resultadoDePlantas = '';
+
+    for (let i = 0; i < plantas.length; i++) {
+    const planta = plantas[i];
+    
+   if(planta === conejo){
+    if(plantas[i + 1] != prohibido){
+        resultadoDePlantas += plantas[i + 1];
+    } 
+   }
+}
+return resultadoDePlantas;
+
+}
+
+console.log(comer(plantas));
+
+
+
+
+
 // multiplicar(multiplicador, numeros)
 // Crear una función multiplicar que tome como argumentos un número multiplicador y un array de números numeros, y que devuelva un array donde cada elemento es el resultado del elemento del primer array (en la misma posición) multiplicado por el número ingresado. Ejemplo:
 
 // multiplicar(2, [5, 7, 15, 22, 40]) // [10, 14, 30, 44, 80]
 // multiplicar(10, [2, 5, 77]) // [20, 50, 770]
+
+
+// let multiplicar = (multiplicador, numeros)=>{
+//     let resultado = [];
+
+
+//     for (let i = 0; i < numeros.length; i++) {
+//         const numero = numeros[i];
+
+//         resultado.push(numero * multiplicador); 
+// }
+
+// return resultado;
+// }
+// console.log(multiplicar(10, [2, 5, 77]))
+
+
+
 // filtrarPorLongitudMayorA(longitud, palabras)
 // Crear una función filtrarPorLongitud que tome como argumentos un número longitud y un array de strings palabras y que devuelva un array con las palabras que tengan una cantidad de letras mayor a longitud. Ejemplo:
 
@@ -280,17 +326,76 @@
 //   'te',
 //   'verde',
 // ]) // ['remolacha', 'sorpresa', 'verde']
+
+
+
+// let filtrarPorLongitudMayorA = (longitud, palabras)=>{
+//     let resultado=[];
+
+//     for (let i = 0; i < palabras.length; i++) {
+//         const palabra = palabras[i];
+
+//         if (palabra.length > longitud) {
+//             resultado.push(palabra)
+//         }
+        
+//     }
+
+// return resultado
+
+// }
+
+// console.log(filtrarPorLongitudMayorA(4, [
+//     'dia',
+//     'remolacha',
+//     'azul',
+//     'sorpresa',
+//     'te',
+//     'verde',
+//   ]));
+
+
 // recortar(cantidadLetras, palabras)
 // Crear una función recortar que tome como argumentos un número cantidadLetras y un array de strings palabras y devuelva un array con las mismas palabras pero recortadas. Las palabras se recortan dejando cantidadLetras letras al iniciando, y recortando las demás. Por ejemplo, elefante recortada a 4 letras queda elef.
 
 // recortar(4, ['elefante', 'dinosaurio'. 'chocolate', 'avion', 'america']) // ['eleft', 'dino' 'chocolate', 'avio', 'amer']
 // recortar(1, ['algoritmo', 'bug', 'compilador']) // ['a', 'b', 'c']
+
+// let recortar = (cantidadLetras, palabras)=>{
+//     let resultado = [];
+
+//     for (let i = 0; i < palabras.length; i++) {
+//         const palabra = palabras[i];
+
+//         resultado.push(palabra.slice(0,cantidadLetras));
+        
+//     }
+// return resultado
+// }
+
+// console.log(recortar(4, ['elefante', 'dinosaurio', 'chocolate', 'avion', 'america']));
+
 // sonIguales(a, b)
 // Crear una función sonIguales(a, b) que tome como argumentos dos arrays a y b y devuelva true si ambos arrays tienen los mismos valores en la misma posición, o false sino.
 
 // sonIguales([10, 25, 6, 33, 48, 105], [10, 25, 6, 33, 48, 105]) // true
 // sonIguales([10, 25, 6, 33, 48, 105], [11, 25, 6, 33, 48, 105]) // false
 // sonIguales([10, 25, 6, 33, 48, 105], [25, 10, 6, 33, 48, 105]) // false
+
+// let sonIguales = (a, b) =>{
+//  let iguales = a[0] === b[0];
+
+//  return iguales;
+
+
+// }
+
+// console.log(sonIguales([10, 25, 6, 33, 48, 105], [10, 25, 6, 33, 48, 105]));
+// console.log(sonIguales([10, 25, 6, 33, 48, 105], [11, 25, 6, 33, 48, 105]));
+// console.log(sonIguales([10, 25, 6, 33, 48, 105], [25, 10, 6, 33, 48, 105]));
+
+
+
 // obtenerResultado(jugadoraA, jugadoraB, puntajesA, puntajesB)
 // Crear una función obtenerResultado que tome como argumentos dos strings jugadoraA y jugadoraB con los nombres de cada jugadora respectivamente, y dos arrays de numeros puntajesA y puntajesB de la misma longitud. La función debe devolver un string con el nombre de la ganadora o Empate en caso de que no haya ninguna. Para eso, debe comparar las mismas posiciones de cada array de puntajes, y sumar puntos a la jugadora correspondiente dependiendo de quien tenga el puntaje más alto. Por ejemplo:
 
@@ -305,6 +410,44 @@
 // obtenerResultado('Ada', 'Grace', [4, 4, 4], [1, 2, 3]) // Ada
 // obtenerResultado('Ada', 'Grace', [3, 5, 5, 7], [4, 1, 2, 9]) // Empate
 // obtenerResultado('Ada', 'Grace', [5, 6, 3, 1, 8], [8, 2, 4, 2, 3]) // Grace
+
+// let obtenerResultado = (jugadoraA, jugadoraB, puntajesA, puntajesB)=>{
+
+// let resultadoJugadoraA= '';
+// let resultadoJugadoraB = '';
+
+//     for (let i = 0; i < puntajesA.length; i++) {
+
+//         let puntajeA = puntajesA[i];
+//         let puntajeB = puntajesB[i];
+
+//     if (puntajeA > puntajeB){
+//         resultadoJugadoraA += 1;
+
+
+//     } else if (puntajeA < puntajeB){
+
+//         resultadoJugadoraB += 1;
+//     } 
+//     }
+
+//     if (resultadoJugadoraA > resultadoJugadoraB) {
+//        return `${jugadoraA}`
+//     } else if (resultadoJugadoraA < resultadoJugadoraB){
+//         return `${jugadoraB}`
+//     } else if (resultadoJugadoraA === resultadoJugadoraB){
+//         return `Empate`
+
+//     }
+//     }
+
+// console.log(obtenerResultado('Ada', 'Grace', [4, 4, 4], [1, 2, 3]));
+
+// console.log(obtenerResultado('Ada', 'Grace', [3, 5, 5, 7], [4, 1, 2, 9]));
+
+// console.log(obtenerResultado('Ada', 'Grace', [5, 6, 3, 1, 8], [8, 2, 4, 2, 3]));
+
+
 // jugarPiedraPapelTijeras(jugadoraA, jugadoraB, jugadasA, jugadasB)
 // Crear una función jugarPiedraPapelTijeras que tome como argumentos dos strings jugadoraA y jugadoraB con los nombres de cada jugadora respectivamente, y dos arrays de strings jugadasA y jugadasB con jugadas de Piedra, Papel o Tijera, de la misma longitud. La función debe devolver un string con el nombre de la ganadora o Empate en caso de que no haya ninguna. Para eso, debe comparar las mismas posiciones de cada array de jugadas, y sumar puntos a la jugadora correspondiente. Por ejemplo:
 
@@ -323,8 +466,49 @@
 //   'Grace',
 //   ['piedra', 'papel', 'papel', 'piedra', 'tijera'],
 //   ['papel', 'piedra', 'tijera', 'tijera', 'papel']
-// ) // Ada
-// Ejercicios con DOM
+// ) // 
+
+// let jugarPiedraPapelTijeras = (jugadoraA, jugadoraB, jugadasA, jugadasB)=>{
+
+// let resultadoJugadoraA= '';
+// let resultadoJugadoraB = '';
+
+// for (let i = 0; i < jugadasA.length; i++) {
+//         const jugadaA = jugadasA[i];
+//         const jugadaB = jugadasB[i];
+     
+//         if ( jugadaA === 'piedra' && jugadaB === 'piedra' || jugadaA === 'papel' && jugadaB === 'papel'|| jugadaA === 'tijera' && jugadaB === 'tijera'){
+//             resultadoJugadoraA += 1;
+//             resultadoJugadoraB += 1;
+
+//                 } else if ( jugadaA === 'piedra' && jugadaB === 'tijera' || jugadaA === 'papel' && jugadaB === 'piedra' || jugadaA === 'tijera' && jugadaB === 'papel'){
+//                     resultadoJugadoraA += 1;
+//                 } else if ( jugadaA === 'tijera' && jugadaB === 'piedra'|| jugadaA === 'papel' && jugadaB === 'tijera' || jugadaA === 'piedra' && jugadaB === 'papel'){
+//                     resultadoJugadoraB += 1;
+//                 } 
+//     }
+
+//     if (resultadoJugadoraA > resultadoJugadoraB) {
+//                return `${jugadoraA}`
+//             } else if (resultadoJugadoraA < resultadoJugadoraB){
+//                 return `${jugadoraB}`
+//             } else if (resultadoJugadoraA === resultadoJugadoraB){
+//                 return `Empate`
+        
+//             }
+// }
+
+// console.log(jugarPiedraPapelTijeras('Ada', 'Grace', ['tijera'], ['piedra']));
+// console.log(jugarPiedraPapelTijeras('Ada', 'Grace', ['papel'], ['papel']));
+// console.log(jugarPiedraPapelTijeras('Ada',
+//   'Grace',
+//   ['piedra', 'papel', 'papel', 'piedra', 'tijera'],
+//   ['papel', 'piedra', 'tijera', 'tijera', 'papel']));
+
+
+
+
+////////// Ejercicios con DOM
 // Para los siguientes ejercicios, no es necesario darle estilos más allá de los básicos que requiera el ejercicio para visualizarse correctamente. Se pueden utilizar funciones realizadas en los ejercicios previos.
 
 // 📝 Lista de tareas

@@ -257,6 +257,13 @@
 // Revertir el orden de la lista ordenada
 // Mostrar en la consola el array revertido
 // Unir los nombres de todas las mujeres en tecnología utilizando " - " para separa
+
+
+
+
+
+
+
 // Ejercicio Array 013
 // Crear un documento con el nombre arr_019.js
 // Si tenemos dos arrays playlistNirvana y playlistFoo:
