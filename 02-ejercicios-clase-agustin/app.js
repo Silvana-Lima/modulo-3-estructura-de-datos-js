@@ -1,5 +1,7 @@
 // Estructuras de datos: Arrays
-// Parte 1 - Repaso
+
+
+// Parte 1 - Repaso✅
 // Ejercicio Array 001
 // Dado el array playlistFoo, mostrar en consola la canción que está en segundo y quinto lugar.
 // const playlistFoo = [
@@ -15,7 +17,7 @@
 // console.log(playlistFoo[1],playlistFoo[4]);
 
 
-// Ejercicio Array 002
+// Ejercicio Array 002✅
 // Crear un array con el nombre notas y asignar un array con 10 valores numéricos de 1 a 10
 // Sumar los valores de la primera, cuarta, quinta y última entrega
 // Cada nota del array notas corresponde a una entrega de las alumnas
@@ -27,7 +29,7 @@
 // console.log(suma);
 
 
-// Ejercicio Array 003
+// Ejercicio Array 003✅
 // Declarar un array con el nombre discoNevermind y asignar los siguientes valores:
 // Smells Like Teen Spirit
 // In Bloom
@@ -57,7 +59,7 @@
 
 // console.log(discoNevermind)
 
-// Ejercicio Array 004
+// Ejercicio Array 004✅
 // Declarar una variable etiquetasHtml con varios de los nombres de las etiquetas de HTML que ya conocés
 // Mostrar en consola el nombre de la 2da etiqueta del array en mayúsculas
 // Mostrar en consola el nombre de la 5ta etiqueta del array en minúsculas
@@ -70,7 +72,7 @@
 // console.log(etiquetasHtml.length);
 
 
-// Ejercicio Array 005
+// Ejercicio Array 005✅
 // Teniendo el array ganadorasRupaul, mostrar en consola el nombre de la primer y última ganadora.
 // Para la última ganadora no se puede usar un índice a mano sino que hay que hacerlo de forma dinámica como si no supieramos la cantidad exacta de elementos
 // const ganadorasRupaul = [
@@ -90,7 +92,7 @@
 
 // console.log(ganadorasRupaul[ganadorasRupaul.length - 1]);
 
-// Ejercicio Array 006
+// Ejercicio Array 006✅
 // Teniendo dos arrays de canciones, comparar sus longitudes y mostrar en pantalla “La playlist de Nirvana tiene más canciones” si el array playlistNirvana tiene más canciones, o “La playlist de Foo Fighters tiene más canciones” si el array playlistFoo tiene más elementos.
 // const playlistNirvana = [
 //   "Smells Like Teen Spirit",
@@ -106,7 +108,7 @@
 //     console.log(`La playlist de Foo Fighters tiene más canciones`)
 // }
 
-// Ejercicio Array 007
+// Ejercicio Array 007✅
 
 // Eliminá el primer elemento del array y colocá en su lugar tu fruta o verdura preferida utilizando shift y unshift.
 
@@ -118,7 +120,7 @@
 
 // console.log(frutas);
 
-// Ejercicio Array 008
+// Ejercicio Array 008✅
 // Declarar una variable llamada concreteAndGold y asignarle un array vacio []
 // Agregar al array las siguientes canciones:
 // T-Shirt
@@ -189,7 +191,7 @@
 
 
 
-// Ejercicio Array 010
+// Ejercicio Array 010✅
 // Partiendo del siguiente array de números const numeros = [6, 1, 2, 3, 4, 5];
 // Eliminar el primer elemento, y agregarlo al final del array.
 // Mostrar el resultado final.
@@ -206,7 +208,7 @@
 
 
 
-// Ejercicio Array 011
+// Ejercicio Array 011✅
 // Crear un documento con el nombre arr_016.js
 // Teniendo las siguientes variables playlist y playlistEscuchada:
 // const playlist = [
@@ -239,19 +241,19 @@
 
 
 
-// Ejercicio Array 012
+// Ejercicio Array 012✅
 // Crear un documento con el nombre arr_018.js
 // Si tenemos el array womenInTech
-// const womenInTech = [
-//   "Ada Lovelace",
-//   "Hedy Lamarr",
-//   "Grace Hopper",
-//   "Radia Perlman",
-//   "Janie Tsao",
-//   "Sheryl Sandberg",
-//   "Susan Kare",
-//   "Parisa Tabriz",
-// ];
+const womenInTech = [
+  "Ada Lovelace",
+  "Hedy Lamarr",
+  "Grace Hopper",
+  "Radia Perlman",
+  "Janie Tsao",
+  "Sheryl Sandberg",
+  "Susan Kare",
+  "Parisa Tabriz",
+];
 // Ordenar el array
 // Mostrar en la consola el array ordenado
 // Revertir el orden de la lista ordenada
@@ -259,12 +261,12 @@
 // Unir los nombres de todas las mujeres en tecnología utilizando " - " para separa
 
 
+// console.log(womenInTech.sort());
+// console.log(womenInTech.reverse());
+// console.log(womenInTech.join(" - "));
 
 
-
-
-
-// Ejercicio Array 013
+// Ejercicio Array 013✅
 // Crear un documento con el nombre arr_019.js
 // Si tenemos dos arrays playlistNirvana y playlistFoo:
 // const playlistNirvana = [
@@ -279,22 +281,59 @@
 // Nombres de las canciones de nirvana (a mano utilizando índices)
 // Nombres de los canciones de foo fighters (utilizando while)
 // Nombres de todas las canciones entre ambas listas (utilizando for)
+// const playlistNirvana = [
+//     "Smells Like Teen Spirit",
+//     "Come As You Are",
+//     "Heart-Shaped Box",
+//     "Lithium",
+//   ];
+//   const playlistFoo = ["Everlong", "The Pretender", "Learn to Fly"];
+
+// let playlistCompleta = playlistNirvana.concat(playlistFoo);
+
+// console.log(playlistCompleta);
+
+// console.log(playlistNirvana[0]);
+// console.log(playlistNirvana[1]);
+// console.log(playlistNirvana[2]);
+// console.log(playlistNirvana[3]);
+
+// let i = 0;
+
+// while (i < playlistFoo.length) {
+//     console.log(playlistFoo[i]);
+//     i++;
+// }
+
+// for (let j = 0; j < playlistCompleta.length; j++) {
+//     const nombres = playlistCompleta[j];
+//     console.log(nombres);
+    
+// }
+
+
 // Ejercicio Array 014
 // Tenemos un array de canciones de Spotify. Queremos mostrar por consola la siguiente información:
 // Posición de la canción Lithium
 // Posición de la canción On a Plain
 // Completar el siguiente código para que pueda mostrarnos lo que solicitamos
-// const playlist = ['Smells Like Teen Spirit', 'Come As You Are', 'Heart-Shaped Box', 'Lithium'];
+//  const playlist = ['Smells Like Teen Spirit', 'Come As You Are', 'Heart-Shaped Box', 'Lithium'];
 
+// playlist.push('On a plain');
+
+// console.log(playlist);
 
 // completar las dos asignaciones de abajo
-// const indiceLithium = ;
-// const indiceOnAPlain = ;
+// const indiceLithium = playlist.indexOf('Lithium');
+// const indiceOnAPlain = playlist.indexOf('On a plain');
 
-// console.log("El índice de la canción Lithium es:");
+// console.log(`"El índice de la canción Lithium es: ${indiceLithium}"`);
 // console.log(indiceLithium); // deberia mostrar 3
-// console.log("El índice de la canción On a Plain es:");
-// console.log(indiceOnAPlain); // deberia mostrar -1
+// console.log(`"El índice de la canción On a Plain es: ${indiceOnAPlain}"`);
+// console.log(indiceOnAPlain); // deberia mostrar -1  ❌muestra 4
+
+
+
 // Ejercicio Array 015
 // Tenemos un array con todas las ganadoras de RuPaul’s Drag Race, en la variable ganadorasRupaul. Vamos a escribir un programa en el que queremos saber la siguiente información:
 // Que número de ganadora es Sharon Needles

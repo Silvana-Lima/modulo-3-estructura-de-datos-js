@@ -264,29 +264,29 @@
 // comer('🥕🥬🐰🥕🥕🥕🚫') // '🥕🥬'
 // comer('🐰🥕🥬🥕🚫🥕') // '🥕'
 // comer('🌱🥕🌱🐰🌱🥬🌱🌱🚫🌷') // '🌱🥕🌱🌷'
-let plantas = 'CZLZP';
-let conejo = 'C';
-let prohibido = 'P';
+// let plantas = 'CZLZP';
+// let conejo = 'C';
+// let prohibido = 'P';
 
 
-let comer = ()=>{
+// let comer = ()=>{
 
-    let resultadoDePlantas = '';
+//     let resultadoDePlantas = '';
 
-    for (let i = 0; i < plantas.length; i++) {
-    const planta = plantas[i];
+//     for (let i = 0; i < plantas.length; i++) {
+//     const planta = plantas[i];
     
-   if(planta === conejo){
-    if(plantas[i + 1] != prohibido){
-        resultadoDePlantas += plantas[i + 1];
-    } 
-   }
-}
-return resultadoDePlantas;
+//    if(planta === conejo){
+//     if(plantas[i + 1] != prohibido){
+//         resultadoDePlantas += plantas[i + 1];
+//     } 
+//    }
+// }
+// return resultadoDePlantas;
 
-}
+// }
 
-console.log(comer(plantas));
+// console.log(comer(plantas));
 
 
 
