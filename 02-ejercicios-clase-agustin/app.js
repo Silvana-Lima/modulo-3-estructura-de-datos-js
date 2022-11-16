@@ -355,6 +355,23 @@ const womenInTech = [
 //   console.log("Latrice Royale NO fue ganadora de RuPaul's Drag Race");
 // }
 // deberia mostrar "Latrice Royale NO fue ganadora de RuPaul's Drag Race"
+
+const ganadorasRupaul = ["Tyra Sanchez", "Chad Michaels", "Raja", "Trixie Mattel", "Aquaria", "Bebe Zahara Benet", "Sharon Needles", "Jinkx Monsoon", "Alaska Thunderfuck 5000", "Bianca Del Rio", "Violet Chachki", "Bob the Drag Queen", "Sasha Velour"];
+
+ const posicionSharonNeedles = ganadorasRupaul.indexOf('Sharon Needles');
+ console.log(`"Sharon Needles es la ganadora número: ${posicionSharonNeedles + 1}"`);
+ console.log(posicionSharonNeedles); // deberia mostrar 5  ❌ muestra 6
+
+ const latriceRoyaleGano = ganadorasRupaul.includes('Latrice Royale');
+
+ if (latriceRoyaleGano) { 
+    console.log("Latrice Royale fue ganadora de RuPaul's Drag Race");
+  } else {
+    console.log("Latrice Royale NO fue ganadora de RuPaul's Drag Race");
+  }
+  //deberia mostrar "Latrice Royale NO fue ganadora de RuPaul's Drag Race"
+  
+
 // Ejercicio Array 016
 // Tenemos un array llamado womenInTech sobre el que tenés que realizar las siguientes operaciones:
 

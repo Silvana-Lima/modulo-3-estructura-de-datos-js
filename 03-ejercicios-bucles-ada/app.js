@@ -119,17 +119,16 @@
 // removerDuplicados([5, 23, 8, 5, 5, 44, 23]) // [5, 23 ,8, 44]
 
 // function removerDuplicados(array) {
+//     const nuevoArray=[];
 //  for (let i = 0; i < array.length; i++) {
 //     const valorActual = array[i];
     
-//     // let primerIndice = array.indexOf(valorActual)
-
-//     // console.log(primerIndice );
-
-   
     
-//  }
-    
+//     let primerIndice = array.indexOf(valorActual)
+
+//     nuevoArray.push(primerIndice)
+// }
+//     return nuevoArray;
 // }
 
 // console.log(removerDuplicados([1, 1, 2, 2, 3, 3]));
@@ -163,31 +162,34 @@
 
 // console.log(repetirLetras('hola', 2));
 
-// capitalizarPalabras(string)❌
+// capitalizarPalabras(string)✅
 // Crear una función capitalizarPalabras tome como argumento un string string y devuelva un string donde cada palabra está capitalizada (con la primera letra ma´yuscula). Dejar las demás letras como están.
 
 // capitalizarPalabras('Esto es un título') // 'Esto Es Un Título'
 // capitalizarPalabras('había una vez') // 'Había Una Vez'
 
 // function capitalizarPalabras(string) {
+
     
 // let palabras = string.split(' ');
-// let nuevoString = '';
+// console.log(palabras);
+// let nuevoString = [];
 
 // for (let i = 0; i < palabras.length; i++) {
 //     const palabra = palabras[i];
-//     console.log(palabra[0].toUpperCase());
 
-
-   
+//     nuevoString.push(palabra.replace(palabra.charAt(0), palabra.charAt(0).toUpperCase()))
+      
 // }
 
-// //return palabra
+// return nuevoString.join(' ');
 
 // }
 // console.log(capitalizarPalabras('Esto es un título'));
 
 // makeTitle('OMG') // 'OMG'
+
+
 // sumarSeccion(array, comienzo, cantidad)
 // Crear una función sumarSeccion que tome como argumento un array de números enteros array, un número entero comienzo y un número entero cantidad, y que devuelva la suma de cantidad de números de array empezando a contar desde el ítem con índice comienzo.
 
@@ -196,10 +198,25 @@
 // sumarSeccion([2, 2, 4, 3, 10, 20, 5], 4, 1) // 3
 
 // function sumarSeccion(array, comienzo, cantidad) {
-    
+//     let resultado = 0;
+//     let nuevoArray = array.slice(comienzo, comienzo + cantidad);
+        
+
+//     for (let i = 0; i < nuevoArray.length; i++) {
+//         const numeroActual = nuevoArray[i];
+
+//         resultado += numeroActual
+
+        
+//     }
+//    return resultado
 // }
 
-// esSubconjunto(subconjunto, conjunto)
+// console.log(sumarSeccion([2, 2, 4, 3, 10, 20, 5], 0, 3));
+// console.log(sumarSeccion([2, 2, 4, 3, 10, 20, 5], 2, 4));
+// console.log(sumarSeccion([2, 2, 4, 3, 10, 20, 5], 4, 1));
+
+// esSubconjunto(subconjunto, conjunto)❌
 // Crear una función esSubconjunto que tome como argumento dos arrays, subconjunto y conjunto, y devuelva true si subconjunto es realmente subconjunto de conjunto, es decir, si todos los valores de subconjunto están en conjunto.
 
 // esSubconjunto([1], [1, 2, 3]) // true
@@ -207,7 +224,25 @@
 // esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49]) // true
 // esSubconjunto([1, 2, 3], [1, 2]) // false
 // esSubconjunto([1], [2, 3, 4]) // false
-// tieneBloque(array)
+
+// function esSubconjunto(subconjunto, conjunto) {
+//     for (let i = 0; i < conjunto.length; i++) {
+//       //  const elementoConjunto = conjunto[i];
+//         const elementoSubconjunto = subconjunto[i];
+
+//         return conjunto.includes(elementoSubconjunto)
+        
+//     }
+    
+// }
+// console.log(esSubconjunto([1], [1, 2, 3]));
+// console.log(esSubconjunto([1, 2, 3], [1, 2, 3, 4, 5]));
+// console.log(esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49]));
+// console.log(esSubconjunto([1, 2, 3], [1, 2]));❌
+// console.log(esSubconjunto([1], [2, 3, 4]));
+
+
+// tieneBloque(array)❌
 // Crear una función hayBloque que tome como argumento un array array y devuelva true si dicho array tiene un bloque de 3 o más ítems consecutivos idénticos, o false si no tiene.
 
 // tieneBloque([1, 2, 3]) // false
@@ -215,14 +250,41 @@
 // tieneBloque([1, 2, 3, 3, 3]) // true
 // tieneBloque([1, 2, 3, 3, 3, 8]) // true
 // tieneBloque([1, 2, 2, 3, 3, 4]) // false
-// esPalindromo(palabra)
-// Crear una función esPalindromo que tenga como par´ámetro un string palabra y devuelva true si dicha palabra es palíndroma, es decir, si puede leerse de igual manera de izquierda a derecha que de derecha a izquierda, o false sino.
+
+// let tieneBloque = (array)=> {
+
+// }                   
+
+// console.log(tieneBloque([1, 2, 3]));
+// console.log(tieneBloque([1, 1, 1, 2, 3]));
+
+// esPalindromo(palabra)✅
+// Crear una función esPalindromo que tenga como parámetro un string palabra y devuelva true si dicha palabra es palíndroma, es decir, si puede leerse de igual manera de izquierda a derecha que de derecha a izquierda, o false sino.
 
 // esPalindromo('ada') // true
 // esPalindromo('reconocer') // true
 // esPalindromo('mama') // false
 // esPalindromo('javascript') // false
 // BONUS: hacer que funcione con oraciones y no con palabras. Ejemplos.
+
+// let esPalindromo = (palabra)=>{
+
+// let array = palabra.split('');
+// let string = array.join('');
+// let arrayInvertido = array.reverse(); 
+// let stringInvertido = arrayInvertido.join('');
+
+
+// return string === stringInvertido;
+
+
+// }
+
+// console.log(esPalindromo('ada'));
+// console.log(esPalindromo('javascript'));
+
+
+
 
 // Programas
 // Los siguientes ejercicios se realizan usando:
