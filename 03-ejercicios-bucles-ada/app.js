@@ -111,7 +111,7 @@
 // console.log(invertir([1, 2, 3]));
 
 
-// removerDuplicados(array)❌❌
+// removerDuplicados(array)✅
 // Crear una función removerDuplicados que tome como argumento un array array y que devuelva un array con los mismos valores de array pero sin valores duplicados.
 
 // removerDuplicados([1, 1, 1]) // [1]
@@ -122,16 +122,16 @@
 //     const nuevoArray=[];
 //  for (let i = 0; i < array.length; i++) {
 //     const valorActual = array[i];
-    
-    
-//     let primerIndice = array.indexOf(valorActual)
-
-//     nuevoArray.push(primerIndice)
+// if (!nuevoArray.includes(valorActual)) {
+//     nuevoArray.push(valorActual);
+// }
 // }
 //     return nuevoArray;
 // }
 
+// console.log(removerDuplicados([1, 1, 1]));
 // console.log(removerDuplicados([1, 1, 2, 2, 3, 3]));
+// console.log(removerDuplicados([5, 23, 8, 5, 5, 44, 23]));
 
 
 
@@ -227,10 +227,10 @@
 
 // function esSubconjunto(subconjunto, conjunto) {
 //     for (let i = 0; i < conjunto.length; i++) {
-//       //  const elementoConjunto = conjunto[i];
+
 //         const elementoSubconjunto = subconjunto[i];
 
-//         return conjunto.includes(elementoSubconjunto)
+//       return conjunto.includes(elementoSubconjunto)
         
 //     }
     
@@ -238,7 +238,7 @@
 // console.log(esSubconjunto([1], [1, 2, 3]));
 // console.log(esSubconjunto([1, 2, 3], [1, 2, 3, 4, 5]));
 // console.log(esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49]));
-// console.log(esSubconjunto([1, 2, 3], [1, 2]));❌
+// console.log(esSubconjunto([1, 2, 3], [1, 2]));
 // console.log(esSubconjunto([1], [2, 3, 4]));
 
 
@@ -252,11 +252,18 @@
 // tieneBloque([1, 2, 2, 3, 3, 4]) // false
 
 // let tieneBloque = (array)=> {
+// for (let i = 0; i < array.length; i++) {
 
+//     return array[i] === array[i + 1] && array[i] === array[i + 2];
+    
+// }
 // }                   
 
 // console.log(tieneBloque([1, 2, 3]));
 // console.log(tieneBloque([1, 1, 1, 2, 3]));
+// console.log(tieneBloque([1, 2, 3, 3, 3]));
+// console.log(tieneBloque([1, 2, 3, 3, 3, 8]));
+// console.log(tieneBloque([1, 2, 2, 3, 3, 4]));
 
 // esPalindromo(palabra)✅
 // Crear una función esPalindromo que tenga como parámetro un string palabra y devuelva true si dicha palabra es palíndroma, es decir, si puede leerse de igual manera de izquierda a derecha que de derecha a izquierda, o false sino.
