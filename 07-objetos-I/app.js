@@ -539,7 +539,7 @@
 
 
 // Segunda parte - objetos dinamicos
-// 01 - persona
+// 01 ✅- persona
 // Declarar una variable con el nombre propiedadNombre y asignar el valor nombre
 // Declarar una variable con el nombre propiedadEdad y asignar el valor edad
 // Crear un objeto persona con las propiedades nombre y edad
@@ -563,7 +563,7 @@
 // console.log(persona['edad']);
 
 
-// 02 - keys
+// 02 ✅- keys
 // Partiendo de un objeto guardado en la variable producto
 // Mostrar en la consola el nombre de todas las propiedades que tiene el producto
 // Utilizar el método keys
@@ -577,8 +577,8 @@
 //   location: 'Capital Federal'
 // };
 
-// // completá acá el código
-// var todasLasPropiedades = ;
+// // // completá acá el código
+//  var todasLasPropiedades = Object.keys(producto) ;
 
 // console.log(todasLasPropiedades);
 // // resultado esperado
@@ -589,7 +589,9 @@
 // //   'condition',
 // //   'free_shipping',
 // //   'location' ]
-// 03 - producto
+
+
+// 03✅ - producto
 // Partiendo de un objeto guardado en la variable producto
 // Mostrar en la consola el nombre y valor de todas las propiedades que tiene el producto
 // Utilizar el método keys
@@ -605,7 +607,23 @@
 //   location: "Capital Federal",
 // };
 
-// // completá acá el código
+// // // // completá acá el código
+
+// let obtenerPropiedadesYValores = (producto)=>{
+
+//     let resultado = '';
+//     let arrayKeys = Object.keys(producto)
+    
+//     for (let i = 0; i < arrayKeys.length; i++) {
+//       const propiedad = arrayKeys[i];
+//       resultado += `producto[${propiedad}] -> ${producto[propiedad]}\n`
+     
+//     }
+
+//   return resultado
+//   }
+  
+//   console.log(obtenerPropiedadesYValores(producto));
 
 // /////
 // // RESULTADO ESPERADO
@@ -616,7 +634,10 @@
 // // producto['condition'] -> nuevo
 // // producto['free_shipping'] -> true
 // // producto['location'] -> Capital Federal
-// 04 - email
+
+
+
+// 04 ✅- email
 // Partiendo de un objeto guardado en la variable user
 // Verificar si tiene la propiedad email
 // Si no la tiene, mostrar en pantalla: 'El usuario no tiene la propiedad email'
@@ -626,16 +647,28 @@
 //   password: "1234567890!",
 // };
 
-// // acá tu solucion
-// 05 - propiedad
+// // // acá tu solucion
+
+
+// let tieneEmail = (objeto)=>{
+// if (objeto.hasOwnProperty('email')) {
+//   return `'El usuario tiene la propiedad email'`
+// } else {
+//   return `'El usuario no tiene la propiedad email'`
+
+// }
+// }
+
+// console.log(tieneEmail(user));
+
+
+// 05✅ - propiedad
 // Completa el código dentro de la función hasProperty
 // Si el objeto de la variable object tiene la propiedad que recibe en la variable property, retorna true
 // Sino retorna false
 // const hasProperty = (object, property) => {
-//   // return true si el objeto (object) tiene la propiedad (property) que llega por parametro
-//   // property es un string
-//   // sino return false
-//   return !!object[property];
+
+//   return object.hasOwnProperty(property);
 // };
 
 // const user = {
@@ -649,10 +682,12 @@
 //   email: "grace@hopper.com",
 // };
 
-// console.log(hasProperty(user, "email")); // false
-// console.log(hasProperty(user, "password")); // true
-// console.log(hasProperty(user, "id")); // false
 
-// console.log(hasProperty(user2, "email")); // true
-// console.log(hasProperty(user2, "password")); // true
-// console.log(hasProperty(user2, "id")); // false
+
+//  console.log(hasProperty(user, "email")); // false
+//  console.log(hasProperty(user, "password")); // true
+//  console.log(hasProperty(user, "id")); // false
+
+//  console.log(hasProperty(user2, "email")); // true
+//  console.log(hasProperty(user2, "password")); // true
+//  console.log(hasProperty(user2, "id")); // false
