@@ -68,7 +68,7 @@
 
 
 // }
-// console.log(esMatrizCuadrada([[4, 5],[2, 7, 1],[8, 10],]));
+// console.log(esMatrizCuadrada([[4, 5],[2, 7, 1],[8, 10],])) ;
 //  console.log(esMatrizCuadrada([[4, 5, 9],[2, 7, 1],[8, 10, 5],]));
 
 //✅ Definí una función generarGrilla que tome por parámetro un número entero filas, un número entero columnas y un array de valores items, y devuelva una matriz de filas filas y columnas columnas, donde cada ítem de la matriz es un ítem aleatorio de items.
@@ -214,24 +214,3 @@
 //     ['🍎', '🍏', '🍌'],
 //     ['🍏', '🍌', '🍎', '🍌'],
 //   ]));
-
-//❌ Definí una función convertirEnMatriz que reciba como argumentos un número entero columnas y un array array y devuelva una matriz con los items de array y la cantidad de columnas columnas por fila. La última fila puede quedarse como menos columnas de las indicadas si no hay más ítems que agregar.
-
-//  convertirEnMatriz(2, [1, 2, 3, 4])
-// [[1, 2], [3, 4]]
-//  convertirEnMatriz(3, [1, 2, 3, 4, 5, 6, 7])
-// [[1, 2, 3], [4, 5, 6], [7]]
-//  convertirEnMatriz(4, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-// [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11]]
-
-// let convertirEnMatriz = (columnas, array)=>{
-// let matriz =[];
-
-// for (let i = 0; i < array.length; i++) {
-   
-    
-// }
-
-// return matriz;
-// }
-// console.log(convertirEnMatriz(2, [1, 2, 3, 4]));

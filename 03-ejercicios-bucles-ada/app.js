@@ -216,33 +216,8 @@
 // console.log(sumarSeccion([2, 2, 4, 3, 10, 20, 5], 2, 4));
 // console.log(sumarSeccion([2, 2, 4, 3, 10, 20, 5], 4, 1));
 
-// esSubconjunto(subconjunto, conjunto)❌
-// Crear una función esSubconjunto que tome como argumento dos arrays, subconjunto y conjunto, y devuelva true si subconjunto es realmente subconjunto de conjunto, es decir, si todos los valores de subconjunto están en conjunto.
 
-// esSubconjunto([1], [1, 2, 3]) // true
-// esSubconjunto([1, 2, 3], [1, 2, 3, 4, 5]) // true
-// esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49]) // true
-// esSubconjunto([1, 2, 3], [1, 2]) // false
-// esSubconjunto([1], [2, 3, 4]) // false
-
-// function esSubconjunto(subconjunto, conjunto) {
-//     for (let i = 0; i < conjunto.length; i++) {
-
-//         const elementoSubconjunto = subconjunto[i];
-
-//       return conjunto.includes(elementoSubconjunto)
-        
-//     }
-    
-// }
-// console.log(esSubconjunto([1], [1, 2, 3]));
-// console.log(esSubconjunto([1, 2, 3], [1, 2, 3, 4, 5]));
-// console.log(esSubconjunto([27, 49, 54], [54, 27, 8, 27, 49]));
-// console.log(esSubconjunto([1, 2, 3], [1, 2]));
-// console.log(esSubconjunto([1], [2, 3, 4]));
-
-
-// tieneBloque(array)❌
+// tieneBloque(array)✅
 // Crear una función hayBloque que tome como argumento un array array y devuelva true si dicho array tiene un bloque de 3 o más ítems consecutivos idénticos, o false si no tiene.
 
 // tieneBloque([1, 2, 3]) // false
@@ -252,11 +227,17 @@
 // tieneBloque([1, 2, 2, 3, 3, 4]) // false
 
 // let tieneBloque = (array)=> {
+//     let contieneBloque = false;
 // for (let i = 0; i < array.length; i++) {
 
-//     return array[i] === array[i + 1] && array[i] === array[i + 2];
+//     if (array[i] === array[i + 1] && array[i] === array[i + 2]) {
+//         contieneBloque = true;
+//     } else{
+//         contieneBloque;
+//     }
     
 // }
+// return contieneBloque;
 // }                   
 
 // console.log(tieneBloque([1, 2, 3]));
