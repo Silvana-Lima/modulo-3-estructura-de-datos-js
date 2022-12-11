@@ -327,3 +327,249 @@
 
 // console.log(seAdecua(persona, busqueda));
 
+//✅ Ejercicio 6: Carrito
+// Tenemos un objeto carrito , que guarda datos de un carrito de compras en una tienda virtual, tiene dos propiedades: cuenta (un objeto con los datos de la persona que está haciendo la compra) y productos (un array de objetos, con todos los productos que está por comprar). Los productos tienen 4 propiedades: id (un número), titulo (un string con el nombre del producto), precio (un número con el precio del producto) y envioIncluido (un booleano que indica si el producto tiene o no cargos por envio). Por ejemplo:
+
+//  let mouse = {
+//   id: 0,
+//   titulo: "Mouse Genius",
+//   precio: 150,
+//   envioIncluido: false
+// };
+
+let teclado = {
+    id: 0,
+    titulo: "teclado",
+    precio: 300,
+    envioIncluido: false
+  };
+
+// carrito.agregarAlCarrito(mouse)
+
+//  carrito.obtenerTotal()
+// 150
+// Definí el método agregarAlCarrito que tome por parámetro un producto y lo agregue al array de productos del carrito, y el método obtenerTotal que retorne la suma de todos los precios de los productos que están en el carrito.
+
+// Solución
+// Consola
+
+// let carrito = {
+//   cuenta: {
+//     id: 123,
+
+//     nombre: "Ada Lovelace",
+//   },
+
+//   productos: [],
+
+//   agregarAlCarrito: function (producto) {
+//     this.productos.push(producto);
+//   },
+
+//   obtenerTotal: function () {
+//     let total = 0;
+//     for (const producto of this.productos) {
+//       total += producto.precio;
+//     }
+//     return total;
+//   },
+
+// };
+
+
+// carrito.agregarAlCarrito(mouse);
+// carrito.agregarAlCarrito(teclado);
+
+// carrito.obtenerTotal()
+
+// console.log(carrito);
+
+// Ejercicio 7: Carrito II
+// Debido a un cambio de requerimiento, el precio final total se calcula distinto. Si un producto no tiene envioIncluido entonces al precio del producto hay que sumarle 120. Si tiene envioIncluido entonces se toma el precio que está en el objeto y no se le suma nada. Una vez calculado el total, hay que agregar un 21% de IVA. 
+
+// Por ejemplo:
+
+ let mouse = {
+  id: 0,
+  titulo: "Mouse Genius",
+  precio: 150,
+  envioIncluido: true
+};
+
+//  carrito.agregarAlCarrito(mouse)
+
+//  carrito.obtenerTotal()
+// 326.7
+// Modificá el método obtenerTotal para que retorne el precio total más el IVA.
+
+// let carrito = {
+//     cuenta: {
+//       id: 123,
+  
+//       nombre: "Ada Lovelace",
+//     },
+  
+//     productos: [],
+  
+//     agregarAlCarrito: function (producto) {
+//       this.productos.push(producto);
+//     },
+  
+//     obtenerTotal: function () {
+//       let total = 0;
+//       for (const producto of this.productos) {
+
+//         if(producto.envioIncluido){
+//             total += producto.precio;
+
+//         } else {
+//             total += producto.precio + 120;
+
+//         }
+//       }
+
+//       total = total + ( total * 21 / 100);
+//       return total;
+//     },
+  
+//   };
+  
+  
+//   carrito.agregarAlCarrito(mouse);
+//   carrito.agregarAlCarrito(teclado);
+
+//   console.log(carrito.obtenerTotal());
+  
+//   console.log(carrito);
+
+//   Ejercicio 8: Carrito III
+// Necesitamos agregar una funcionalidad más a nuestro carrito, para ello vamos a agregarle un método que se llame detalle que debe mostrar el listado de productos a comprar con su precio y al final de todo el precio final total, con IVA incluido.
+
+//  carrito.detalle()
+// `
+// Listado de productos:
+// Monitor - $320,
+// Pendrive - $250
+// Mouse - $120.5
+// Disco rigido - $530
+// Teclado - $125.99
+// Total con IVA: $1629.2529
+// `
+// Definí el método detalle que retorne el detalle tal como acabamos de mostrar.
+
+// let carrito = {
+//   cuenta: {
+//     id: 123,
+
+//     nombre: "Ada Lovelace",
+//   },
+
+//   productos: [],
+
+//   agregarAlCarrito: function (producto) {
+//     this.productos.push(producto);
+//   },
+
+//   precioConEnvio: function () {
+//     for (const producto of this.productos) {
+//       if (producto.envioIncluido) {
+//         producto.precioConEnvio = producto.precio;
+//       } else {
+//         producto.precioConEnvio = producto.precio + 120;
+//       }
+//     }
+//   },
+
+//   obtenerTotal: function () {
+//     let totalProductos = 0;
+//     let total = 0;
+//     for (const producto of this.productos) {
+//       totalProductos += producto.precioConEnvio;
+//     }
+
+//     total = totalProductos + totalProductos * 21 / 100;
+//     return total;
+//   },
+
+//   detalle: function () {
+//     let detalleProductos = "";
+
+//     for (const producto of this.productos) {
+//       detalleProductos += `\n${producto.titulo} - ${producto.precioConEnvio}`;
+//     }
+
+//     let totalConIva = `\nTotal con IVA: ${this.obtenerTotal()}`
+//     return `Listado de productos: ${detalleProductos} ${totalConIva}`;
+//   },
+// };
+
+// carrito.agregarAlCarrito(mouse);
+// carrito.agregarAlCarrito(teclado);
+// carrito.precioConEnvio();
+// console.log(carrito.obtenerTotal());
+
+// console.log(carrito.detalle());
+
+// console.log(carrito);
+
+//OTRA SOLUCION
+
+// let carrito = {
+//     cuenta: {
+//       id: 123,
+  
+//       nombre: "Ada Lovelace",
+//     },
+  
+//     productos: [],
+  
+//     agregarAlCarrito: function (producto) {
+//       this.productos.push(producto);
+//     },
+  
+//     obtenerTotal: function () {
+//       let total = 0;
+//       for (const producto of this.productos) {
+
+//         if(producto.envioIncluido){
+//             total += producto.precio;
+
+//         } else {
+//             total += producto.precio + 120;
+
+//         }
+//       }
+
+//       total = total + ( total * 21 / 100);
+//       return total;
+//     },
+
+//   detalle: function () {
+//     let detalleProductos = "";
+//     let precioConEnvio = 0;
+
+//     for (const producto of this.productos) {
+
+//         if(producto.envioIncluido){
+//             precioConEnvio = producto.precio;
+
+//         } else {
+//             precioConEnvio = producto.precio + 120;
+
+//         }
+//         detalleProductos += `\n${producto.titulo} - $${precioConEnvio}`;
+//       }
+
+//     let totalConIva = `\nTotal con IVA: $${this.obtenerTotal()}`
+//     return `Listado de productos: ${detalleProductos} ${totalConIva}`;
+//   },
+//   };
+  
+//   carrito.agregarAlCarrito(mouse);
+//   carrito.agregarAlCarrito(teclado);
+//   //carrito.precioConEnvio();
+//   console.log(carrito.obtenerTotal());
+  
+//   console.log(carrito.detalle());
+  
+//   console.log(carrito);

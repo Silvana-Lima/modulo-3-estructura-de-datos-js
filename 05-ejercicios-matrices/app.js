@@ -129,30 +129,24 @@
 //     [0, 0, 0, 0, 0]
 //   ] 
 
-// let generarMatrizEscalonada = (filas)=>{
-//     let matriz= [];
+let generarMatrizEscalonada = (filas) => {
+  let matriz = [];
 
-//     for (let i = 0; i < filas; i++) {
-//         matriz.push([]);
-//     }
+  for (let i = 0; i < filas; i++) {
+    matriz.push([]);
+  }
 
-//     for (let j = 0; j < matriz.length; j++) {
-//         const array = matriz[j];
+  for (let j = 0; j < matriz.length; j++) {
+    let array = matriz[j];
 
-//         console.log(array);
+    for (let x = 0; x < filas; x++) {
+      array.push(0);
+    }
+  }
 
-//         for (let x = 0; x < filas; x++) {
-//             let columnas = x;
-//           //  let array = 0;
-
-//             array.push(columnas)
-            
-//         }
-        
-//     }
-// return matriz
-// }
-// console.log(generarMatrizEscalonada(3));
+  return matriz;
+};
+console.log(generarMatrizEscalonada(3));
 
 // ✅Definí una función obtenerFilaMasLarga que reciba como argumento un array 2d matriz y devuelva el array (fila) que tenga mayor longitud. Si hay varios de igual longitud, debe devolver el primero de ellos.
 
